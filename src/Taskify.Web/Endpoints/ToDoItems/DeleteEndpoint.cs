@@ -1,0 +1,35 @@
+﻿namespace Taskify.Web.Endpoints.ToDoItems
+{
+    using Ardalis.Result;
+
+    using FastEndpoints;
+
+    using MediatR;
+
+    using Taskify.Tasks.UseCases.ToDoItems.Delete;
+    using Taskify.Tasks.UseCases.ToDoItems.Get;
+
+    public sealed class DeleteEndpoint : Endpoint<DeleteToDoItemCommand, Result>
+    {
+        private readonly IMediator _mediator;
+
+        public DeleteEndpoint(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+
+        public override void Configure()
+        {
+            AllowAnonymous();
+            Delete("api/todoitems/{id}");
+        }
+
+        public override async Task HandleAsync(
+            DeleteToDoItemCommand request,
+            CancellationToken ct)
+        {
+            var response = await _mediator.Send(request, ct);
+            await SendAsync(response);
+        }
+    }
+}

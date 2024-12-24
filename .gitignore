@@ -1,0 +1,83 @@
+# Build Folders (binary files)
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VSCode
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# ASP.NET Scaffolding
+.scaffolding/
+
+# Log Files
+*.log
+
+# NuGet Packages
+*.nupkg
+packages/
+# Uncomment if you have a custom NuGet cache directory
+# *.nuget/
+
+# Visual Studio 2022 Cache
+.vs/
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.cov
+
+# Auto-generated Files
+*.generated.cs
+*.g.cs
+*.designer.cs
+*.g.i.cs
+
+# Publish Outputs
+.publish/
+
+# Azure Pipelines
+.env
+.env.local
+.env.*.local
+
+# Database
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+# Temporary Files
+*.tmp
+*.temp
+~$*
+*.cache
+
+# JetBrains Rider and Resharper
+.idea/
+*.dotCover
+*.dotSettings.user
+.idea/
+_ReSharper.Caches/
+
+# Local History for IDEs
+.history/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Lock Files
+*.lock.json

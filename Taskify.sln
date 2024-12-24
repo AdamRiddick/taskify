@@ -1,0 +1,101 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35201.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Web", "src\Taskify.Web\Taskify.Web.csproj", "{5FBA1801-42FC-400A-8812-E190DB33D66B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Infrastructure.Ef", "src\Future Packages\Taskify.Infrastructure.Ef\Taskify.Infrastructure.Ef.csproj", "{F3E70D5C-4581-41A3-855D-36E46285A66C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.UnitTests", "tests\Taskify.UnitTests\Taskify.UnitTests.csproj", "{D63C59DB-E203-4867-ABC0-7AD6FE294CAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{60E699B9-4A52-4184-AF82-2191E428F1E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domains", "Domains", "{15F2C582-BE57-4B50-AA56-109586CBD104}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.SharedKernel", "src\Future Packages\Taskify.SharedKernel\Taskify.SharedKernel.csproj", "{06D5588D-D61B-497F-9B0C-3EBEA90CE846}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Future Packages", "Future Packages", "{7E514E54-9B42-461D-8A68-30CDD96DC246}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.ArchitectureTests", "tests\Taskify.ArchitectureTests\Taskify.ArchitectureTests.csproj", "{80EA90DB-197A-44F8-8BEA-6C535081E6E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7086CBEE-9F55-46BC-A8C5-3FC6DCEA0D32}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tasks", "Tasks", "{789BF089-342D-45F5-8EDE-4B74383F4E3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{C118ADAD-B597-410F-8531-EF656C310D20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Tasks.Core", "src\Domains\Tasks\Taskify.Tasks.Core\Taskify.Tasks.Core.csproj", "{0048A03E-4EC7-4A04-B0DF-8791F04175E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Tasks.UseCases", "src\Domains\Tasks\Taskify.Tasks.UseCases\Taskify.Tasks.UseCases.csproj", "{4186102A-480D-4BB1-B7F4-CA755819BC4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taskify.Tasks.Infrastructure", "src\Domains\Tasks\Taskify.Tasks.Infrastructure\Taskify.Tasks.Infrastructure.csproj", "{E8478449-CD3C-4BE3-A550-93F42BE764B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taskify.Infrastructure.Email", "src\Future Packages\Taskify.Infrastructure.Email\Taskify.Infrastructure.Email.csproj", "{F206306F-9079-4FA0-AE72-6FD8A907AD55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FBA1801-42FC-400A-8812-E190DB33D66B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FBA1801-42FC-400A-8812-E190DB33D66B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FBA1801-42FC-400A-8812-E190DB33D66B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FBA1801-42FC-400A-8812-E190DB33D66B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3E70D5C-4581-41A3-855D-36E46285A66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3E70D5C-4581-41A3-855D-36E46285A66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3E70D5C-4581-41A3-855D-36E46285A66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3E70D5C-4581-41A3-855D-36E46285A66C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D63C59DB-E203-4867-ABC0-7AD6FE294CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D63C59DB-E203-4867-ABC0-7AD6FE294CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D63C59DB-E203-4867-ABC0-7AD6FE294CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D63C59DB-E203-4867-ABC0-7AD6FE294CAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06D5588D-D61B-497F-9B0C-3EBEA90CE846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06D5588D-D61B-497F-9B0C-3EBEA90CE846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06D5588D-D61B-497F-9B0C-3EBEA90CE846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06D5588D-D61B-497F-9B0C-3EBEA90CE846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80EA90DB-197A-44F8-8BEA-6C535081E6E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80EA90DB-197A-44F8-8BEA-6C535081E6E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80EA90DB-197A-44F8-8BEA-6C535081E6E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80EA90DB-197A-44F8-8BEA-6C535081E6E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0048A03E-4EC7-4A04-B0DF-8791F04175E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0048A03E-4EC7-4A04-B0DF-8791F04175E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0048A03E-4EC7-4A04-B0DF-8791F04175E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0048A03E-4EC7-4A04-B0DF-8791F04175E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4186102A-480D-4BB1-B7F4-CA755819BC4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4186102A-480D-4BB1-B7F4-CA755819BC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4186102A-480D-4BB1-B7F4-CA755819BC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4186102A-480D-4BB1-B7F4-CA755819BC4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8478449-CD3C-4BE3-A550-93F42BE764B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8478449-CD3C-4BE3-A550-93F42BE764B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8478449-CD3C-4BE3-A550-93F42BE764B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8478449-CD3C-4BE3-A550-93F42BE764B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F206306F-9079-4FA0-AE72-6FD8A907AD55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F206306F-9079-4FA0-AE72-6FD8A907AD55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F206306F-9079-4FA0-AE72-6FD8A907AD55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F206306F-9079-4FA0-AE72-6FD8A907AD55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3E70D5C-4581-41A3-855D-36E46285A66C} = {7E514E54-9B42-461D-8A68-30CDD96DC246}
+		{D63C59DB-E203-4867-ABC0-7AD6FE294CAF} = {60E699B9-4A52-4184-AF82-2191E428F1E5}
+		{06D5588D-D61B-497F-9B0C-3EBEA90CE846} = {7E514E54-9B42-461D-8A68-30CDD96DC246}
+		{80EA90DB-197A-44F8-8BEA-6C535081E6E8} = {60E699B9-4A52-4184-AF82-2191E428F1E5}
+		{789BF089-342D-45F5-8EDE-4B74383F4E3C} = {15F2C582-BE57-4B50-AA56-109586CBD104}
+		{C118ADAD-B597-410F-8531-EF656C310D20} = {15F2C582-BE57-4B50-AA56-109586CBD104}
+		{0048A03E-4EC7-4A04-B0DF-8791F04175E9} = {789BF089-342D-45F5-8EDE-4B74383F4E3C}
+		{4186102A-480D-4BB1-B7F4-CA755819BC4F} = {789BF089-342D-45F5-8EDE-4B74383F4E3C}
+		{E8478449-CD3C-4BE3-A550-93F42BE764B6} = {789BF089-342D-45F5-8EDE-4B74383F4E3C}
+		{F206306F-9079-4FA0-AE72-6FD8A907AD55} = {7E514E54-9B42-461D-8A68-30CDD96DC246}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11D3D1E4-8EF8-43DB-B7E6-0733C759C257}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,74 @@
+​​​​​​​​​​​​​@startuml C4_Elements
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+LAYOUT_WITH_LEGEND()
+
+center header
+= <font color=black>Context Diagram for Taskify</font>
+endheader
+
+AddExternalSystemTag("ExtSystem", $bgColor="#90c476", $legendText="external_system")
+
+Boundary(taskify, "Taskify") {
+    Boundary(ui, "User Interface") {
+        Container(webApi, "Web API", "C# .Net", "API using FastEndpoints")
+    }
+
+    Boundary(identityDomain, "Identity Domain", "Functionality for managing Users") {
+        Container(identityCore, "Identity Core", "C# .Net", "Domain model & logic")
+        Container(identityUsecases, "Identity Use Cases", "C# .Net", "Workflows project (CQRS commands & handlers)")
+        Container(identityInfra, "Identity Infrastructure", "C# .Net", "Infrastructure project (datastore, email, etc.)")
+    }
+
+    Boundary(tasksDomain, "Tasks Domain", "Functionality for managing ToDo Items") {
+        Container(tasksCore, "Tasks Core", "C# .Net", "Domain model & logic")
+        Container(tasksUsecases, "Tasks Use Cases", "C# .Net", "Workflows project (CQRS commands & handlers)")
+        Container(tasksInfra, "Tasks Infrastructure", "C# .Net", "Infrastructure project (datastore, email, etc.)")
+    }
+
+    ContainerDb(Database, "Database", "MSSQL", "The Data Store")
+}
+
+Boundary(packages, "Taskify Packages"){
+    Container(pkgSharedKernel, "Taskify.SharedKernel", "C# .Net", "Definitions shared amongst the entire domain")
+
+    Boundary(infraPackages, "Infrastructure Packages"){
+        Container(pkgInfraEmail, "Taskify.Infrastructure.Email", "C# .Net", "Provies email functionality")
+        Container(pkgInfraEf, "Taskify.Infrastructure.Ef", "C# .Net EFCore", "Provies database functionality via Entity Framework Core")
+    }
+}
+
+Boundary(tests, "Tests") {
+    Container(archTests, "Architecture Tests", "C# .Net ArchUnit", "Tests for ensuring architectural constraints are not breached")
+    Container(unitTests, "Unit Tests", "C# .Net ArchUnit", "Unit Tests covering all domains & packages")
+}
+
+' Web Api
+Rel(webApi, identityUsecases, "Uses")
+Rel(webApi, identityInfra, "Uses")
+'Rel(webApi, identityCore, "Uses") 'Not displayed for brevity
+Rel(webApi, tasksUsecases, "Uses")
+Rel(webApi, tasksInfra, "Uses")
+'Rel(webApi, tasksCore, "Uses") 'Not displayed for brevity
+'Rel(webApi, pkgSharedKernel, "Uses") 'Not displayed for brevity
+
+
+' Identity
+Rel(identityInfra, Database, "Uses")
+Rel(identityInfra, identityCore, "Uses")
+'Rel(identityInfra, pkgInfraEmail, "Uses") 'Not displayed for brevity
+'Rel(identityInfra, pkgInfraEf, "Uses") 'Not displayed for brevity
+Rel(identityUsecases, identityCore, "Uses")
+Rel(identityCore, pkgSharedKernel, "Uses")
+
+' Tasks
+Rel(tasksInfra, Database, "Uses")
+Rel(tasksInfra, tasksCore, "Uses")
+Rel(tasksInfra, pkgInfraEmail, "Uses")
+Rel(tasksInfra, pkgInfraEf, "Uses")
+Rel(tasksUsecases, tasksCore, "Uses")
+Rel(tasksCore, pkgSharedKernel, "Uses")
+
+SHOW_LEGEND(false)
+
+@enduml
