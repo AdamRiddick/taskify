@@ -21,7 +21,7 @@
         public override void Configure()
         {
             AllowAnonymous();
-            Delete("api/todoitems/{id}");
+            Delete("api/tasks/todoitems/{id}");
         }
 
         public override async Task HandleAsync(

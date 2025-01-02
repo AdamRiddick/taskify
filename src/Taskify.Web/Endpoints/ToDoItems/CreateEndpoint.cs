@@ -18,7 +18,7 @@
         public override void Configure()
         {
             AllowAnonymous();
-            Post("api/todoitems");
+            Post("api/tasks/todoitems");
         }
 
         public override async Task HandleAsync(

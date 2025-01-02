@@ -20,7 +20,7 @@
         public override void Configure()
         {
             AllowAnonymous();
-            Get("api/todoitems/{id}");
+            Get("api/tasks/todoitem/{id}");
         }
 
         public override async Task HandleAsync(

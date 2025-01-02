@@ -12,5 +12,11 @@
         {
             
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema("tasks");
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

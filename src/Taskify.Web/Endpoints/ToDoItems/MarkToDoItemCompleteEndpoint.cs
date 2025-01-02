@@ -20,7 +20,7 @@
         public override void Configure()
         {
             AllowAnonymous();
-            Post("api/todoitems/{id}/complete");
+            Post("api/tasks/todoitems/{id}/complete");
 
             // see: https://github.com/FastEndpoints/FastEndpoints/issues/492#issuecomment-1740210893
             Description(x => x.Accepts<MarkToDoItemCompleteCommand>());
