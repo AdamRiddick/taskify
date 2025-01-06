@@ -1,6 +1,7 @@
-﻿namespace Taskify.Tasks.UseCases.ToDoItems.Create;
+﻿namespace Taskify.Tasks.UseCases.ToDoItems.Update;
 
 using System;
+
 using Taskify.Tasks.Core.ToDoItemAggregate;
 
 public class UpdateToDoItemDto

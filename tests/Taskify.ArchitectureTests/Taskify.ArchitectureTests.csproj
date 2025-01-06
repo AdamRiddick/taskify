@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Domains\Identity\Taskify.Identity.Core\Taskify.Identity.Core.csproj" />
+    <ProjectReference Include="..\..\src\Domains\Identity\Taskify.Identity.Infrastructure\Taskify.Identity.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Domains\Identity\Taskify.Identity.UseCases\Taskify.Identity.UseCases.csproj" />
     <ProjectReference Include="..\..\src\Domains\Tasks\Taskify.Tasks.Core\Taskify.Tasks.Core.csproj" />
     <ProjectReference Include="..\..\src\Domains\Tasks\Taskify.Tasks.Infrastructure\Taskify.Tasks.Infrastructure.csproj" />
     <ProjectReference Include="..\..\src\Domains\Tasks\Taskify.Tasks.UseCases\Taskify.Tasks.UseCases.csproj" />

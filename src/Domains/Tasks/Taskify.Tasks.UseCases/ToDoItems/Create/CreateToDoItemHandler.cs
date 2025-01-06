@@ -24,6 +24,6 @@ public class CreateToDoItemHandler : ICommandHandler<CreateToDoItemCommand, Resu
         var newEntity = request.Dto.Adapt<ToDoItem>();
         newEntity.MarkNew();
         var createdItem = await _repository.AddAsync(newEntity, cancellationToken);
-        return createdItem.Id;
+        return Result.Success(createdItem.Id);
     }
 }

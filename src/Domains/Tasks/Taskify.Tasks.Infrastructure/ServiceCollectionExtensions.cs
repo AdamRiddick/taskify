@@ -1,4 +1,4 @@
-﻿namespace Taskify.SharedKernel;
+﻿namespace Taskify.Tasks.Infrastructure;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -18,7 +18,7 @@ public static class ServiceCollectionExtensions
         ITaskifyEnvironmentSettings taskifyEnvironmentSettings)
     {
 
-                            //var connectionString = configuration.GetConnectionString("DefaultConnection");
+        //var connectionString = configuration.GetConnectionString("DefaultConnection");
         services.AddDbContext<TasksDbContext>(options =>
                     options.UseInMemoryDatabase("Taskify"));
         //options.UseSqlServer(connectionString));

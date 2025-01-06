@@ -9,5 +9,6 @@ public class CreateToDoItemCommandValidator : AbstractValidator<CreateToDoItemCo
         RuleFor(x => x.Dto).NotNull();
         RuleFor(x => x.Dto.Title).NotEmpty().MaximumLength(255);
         RuleFor(x => x.Dto.Description).MaximumLength(4000);
+        RuleFor(x => x.Dto.Priority).IsInEnum();
     }
 }

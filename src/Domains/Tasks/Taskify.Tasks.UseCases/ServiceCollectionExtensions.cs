@@ -1,4 +1,4 @@
-﻿namespace Taskify.SharedKernel;
+﻿namespace Taskify.Tasks.UseCases;
 
 using Mapster;
 

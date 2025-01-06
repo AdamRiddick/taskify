@@ -1,8 +1,12 @@
 ﻿namespace Taskify.Web.Configuration;
+
 using MediatR;
 
 using System.Reflection;
 
+using Taskify.Identity.Core.ContextTypeAggregate;
+using Taskify.Identity.Infrastructure.Data;
+using Taskify.Identity.UseCases.ContextTypes.Create;
 using Taskify.SharedKernel;
 using Taskify.SharedKernel.Behaviour;
 using Taskify.SharedKernel.Events;
@@ -16,9 +20,12 @@ public static class MediatorConfiguration
     {
         var mediatRAssemblies = new[]
       {
-        Assembly.GetAssembly(typeof(ToDoItem)), // Core
-        Assembly.GetAssembly(typeof(TasksDbContext)), // Infrastructure
-        Assembly.GetAssembly(typeof(CreateToDoItemCommand)) // Use Cases
+        Assembly.GetAssembly(typeof(ContextType)), // Identity.Core
+        Assembly.GetAssembly(typeof(IdentityDbContext)), // Identity.Infrastructure
+        Assembly.GetAssembly(typeof(CreateContextTypeCommand)), // Identity.UseCases
+        Assembly.GetAssembly(typeof(ToDoItem)), // Tasks.Core
+        Assembly.GetAssembly(typeof(TasksDbContext)), // Tasks.Infrastructure
+        Assembly.GetAssembly(typeof(CreateToDoItemCommand)) // Tasks.UseCases
       };
 
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(mediatRAssemblies!))

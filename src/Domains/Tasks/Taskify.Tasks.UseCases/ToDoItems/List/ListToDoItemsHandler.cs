@@ -14,9 +14,9 @@ using Taskify.Tasks.Core.ToDoItemAggregate;
 
 public class ListToDoItemsHandler : IQueryHandler<ListToDoItemsQuery, Result<IEnumerable<ListToDoItemDto>>>
 {
-    private readonly IRepository<ToDoItem> _repository;
+    private readonly IReadRepository<ToDoItem> _repository;
 
-    public ListToDoItemsHandler(IRepository<ToDoItem> repository)
+    public ListToDoItemsHandler(IReadRepository<ToDoItem> repository)
     {
         _repository = repository;
     }

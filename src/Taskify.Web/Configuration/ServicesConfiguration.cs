@@ -2,8 +2,11 @@
 
 using FastEndpoints;
 
-using Taskify.SharedKernel;
+using Taskify.Identity.Infrastructure;
+using Taskify.Identity.UseCases;
 using Taskify.SharedKernel.Configuration;
+using Taskify.Tasks.Infrastructure;
+using Taskify.Tasks.UseCases;
 
 public static class ServicesConfiguration
 {
@@ -14,7 +17,9 @@ public static class ServicesConfiguration
         ILogger logger)
     {
         services.AddFastEndpoints()
+                .AddIdentityInfrastructure(configuration, taskifyEnvironmentSettings)
                 .AddTasksInfrastructure(configuration, taskifyEnvironmentSettings)
+                .AddIdentityUseCaseServices()
                 .AddTasksUseCaseServices();
         logger.LogInformation("Services registered");
         return services;
