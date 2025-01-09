@@ -5,7 +5,11 @@ using FastEndpoints;
 using MediatR;
 
 using Taskify.Identity.UseCases.ContextTypes.Create;
+using Taskify.SharedKernel.Security;
+using Taskify.Web.Authorization;
+using Taskify.Web.Authorization.Attributes;
 
+[ScopeAuthorization(Scopes.Identity.ContextTypes.All, Scopes.Identity.ContextTypes.Write)]
 public sealed class CreateEndpoint : Endpoint<CreateContextTypeDto, int>
 {
     private readonly IMediator _mediator;
@@ -17,8 +21,8 @@ public sealed class CreateEndpoint : Endpoint<CreateContextTypeDto, int>
 
     public override void Configure()
     {
-        AllowAnonymous();
         Post("api/identity/contexttypes");
+        Policies(PolicyNames.HasScope);
     }
 
     public override async Task HandleAsync(

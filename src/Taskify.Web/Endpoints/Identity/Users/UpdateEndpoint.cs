@@ -7,7 +7,12 @@ using FastEndpoints;
 using MediatR;
 
 using Taskify.Identity.UseCases.Users.Update;
+using Taskify.SharedKernel.Security;
+using Taskify.Web.Authorization;
+using Taskify.Web.Authorization.Attributes;
 
+[ContextAuthorization(SecurityContexts.Identity.Users, Role.Reader)]
+[ScopeAuthorization(Scopes.Identity.Users.All, Scopes.Identity.Users.Write)]
 public sealed class UpdateEndpoint : Endpoint<UpdateUserDto, Result>
 {
     private readonly IMediator _mediator;
@@ -19,8 +24,8 @@ public sealed class UpdateEndpoint : Endpoint<UpdateUserDto, Result>
 
     public override void Configure()
     {
-        AllowAnonymous();
         Put("api/tasks/users/{id}");
+        Policies(PolicyNames.HasScope, PolicyNames.HasRoleAccessToContext);
     }
 
     public override async Task HandleAsync(

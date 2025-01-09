@@ -1,28 +1,28 @@
-﻿namespace Taskify.Identity.UseCases.UserContextRoles.Create;
+﻿namespace Taskify.Identity.UseCases.Users.Create;
 
 using Ardalis.Result;
 
 using Mapster;
 
-using Taskify.Identity.Core.UserContextRoleAggregate;
+using Taskify.Identity.Core.UserAggregate;
 using Taskify.SharedKernel.Cqrs;
 using Taskify.SharedKernel.Data;
 
-public class CreateUserContextRoleHandler : ICommandHandler<CreateUserContextRoleCommand, Result<int>>
+public class CreateUserHandler : ICommandHandler<CreateUserCommand, Result<int>>
 {
-    private readonly IRepository<UserContextRole> _repository;
+    private readonly IRepository<User> _repository;
 
-    public CreateUserContextRoleHandler(
-        IRepository<UserContextRole> repository)
+    public CreateUserHandler(
+        IRepository<User> repository)
     {
         _repository = repository;
     }
 
     public async Task<Result<int>> Handle(
-        CreateUserContextRoleCommand request,
+        CreateUserCommand request,
         CancellationToken cancellationToken)
     {
-        var newEntity = request.Dto.Adapt<UserContextRole>();
+        var newEntity = request.Dto.Adapt<User>();
         var createdItem = await _repository.AddAsync(newEntity, cancellationToken);
         return Result.Created(createdItem.Id);
     }

@@ -17,6 +17,9 @@
                 .IsRequired();
             builder.Property(x => x.UserId)
                 .IsRequired();
+            builder.HasOne(x => x.ContextType)
+                .WithOne()
+                .HasForeignKey<UserContextRole>(x => x.ContextTypeId);
         }
     }
 }

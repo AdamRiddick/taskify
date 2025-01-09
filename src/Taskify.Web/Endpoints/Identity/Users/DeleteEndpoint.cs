@@ -7,7 +7,12 @@ using FastEndpoints;
 using MediatR;
 
 using Taskify.Identity.UseCases.Users.Delete;
+using Taskify.SharedKernel.Security;
+using Taskify.Web.Authorization;
+using Taskify.Web.Authorization.Attributes;
 
+[ContextAuthorization(SecurityContexts.Identity.Users, Role.Contributor)]
+[ScopeAuthorization(Scopes.Identity.Users.All, Scopes.Identity.Users.Write)]
 public sealed class DeleteEndpoint : Endpoint<DeleteUserCommand, Result>
 {
     private readonly IMediator _mediator;
@@ -19,8 +24,8 @@ public sealed class DeleteEndpoint : Endpoint<DeleteUserCommand, Result>
 
     public override void Configure()
     {
-        AllowAnonymous();
         Delete("api/tasks/users/{id}");
+        Policies(PolicyNames.HasScope, PolicyNames.HasRoleAccessToContext);
     }
 
     public override async Task HandleAsync(

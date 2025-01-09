@@ -6,8 +6,13 @@ using FastEndpoints;
 
 using MediatR;
 
+using Taskify.SharedKernel.Security;
 using Taskify.Tasks.UseCases.ToDoItems.MarkToDoItemComplete;
+using Taskify.Web.Authorization;
+using Taskify.Web.Authorization.Attributes;
 
+[ContextAuthorization(SecurityContexts.Tasks.ToDoItem, Role.Contributor)]
+[ScopeAuthorization(Scopes.Tasks.ToDoItem.All, Scopes.Tasks.ToDoItem.Write)]
 public sealed class MarkToDoItemCompleteEndpoint : Endpoint<MarkToDoItemCompleteCommand, Result>
 {
     private readonly IMediator _mediator;
@@ -19,8 +24,8 @@ public sealed class MarkToDoItemCompleteEndpoint : Endpoint<MarkToDoItemComplete
 
     public override void Configure()
     {
-        AllowAnonymous();
         Post("api/tasks/todoitems/{id}/complete");
+        Policies(PolicyNames.HasScope, PolicyNames.HasRoleAccessToContext);
 
         // see: https://github.com/FastEndpoints/FastEndpoints/issues/492#issuecomment-1740210893
         Description(x => x.Accepts<MarkToDoItemCompleteCommand>());

@@ -4,6 +4,8 @@ using Taskify.SharedKernel.Security;
 
 public class CreateUserContextRoleDto
 {
+    public int? ContextId { get; set; }
+
     public int ContextTypeId { get; set; }
 
     public Role Role { get; set; }

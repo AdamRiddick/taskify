@@ -37,11 +37,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Tasks.Infrastructur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Infrastructure.Email", "src\Future Packages\Taskify.Infrastructure.Email\Taskify.Infrastructure.Email.csproj", "{F206306F-9079-4FA0-AE72-6FD8A907AD55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taskify.Identity.Core", "src\Domains\Identity\Taskify.Identity.Core\Taskify.Identity.Core.csproj", "{028C19A0-E8F9-49B6-92D4-1519ABA4D578}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Identity.Core", "src\Domains\Identity\Taskify.Identity.Core\Taskify.Identity.Core.csproj", "{028C19A0-E8F9-49B6-92D4-1519ABA4D578}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taskify.Identity.Infrastructure", "src\Domains\Identity\Taskify.Identity.Infrastructure\Taskify.Identity.Infrastructure.csproj", "{1AB67D9C-C0E9-4B9E-A0C3-4C8C592C3BB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Identity.Infrastructure", "src\Domains\Identity\Taskify.Identity.Infrastructure\Taskify.Identity.Infrastructure.csproj", "{1AB67D9C-C0E9-4B9E-A0C3-4C8C592C3BB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taskify.Identity.UseCases", "src\Domains\Identity\Taskify.Identity.UseCases\Taskify.Identity.UseCases.csproj", "{CDE6AA31-F5AD-4909-A931-6541AD6B60FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Identity.UseCases", "src\Domains\Identity\Taskify.Identity.UseCases\Taskify.Identity.UseCases.csproj", "{CDE6AA31-F5AD-4909-A931-6541AD6B60FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

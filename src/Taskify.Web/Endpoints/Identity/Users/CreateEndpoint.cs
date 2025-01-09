@@ -5,7 +5,12 @@ using FastEndpoints;
 using MediatR;
 
 using Taskify.Identity.UseCases.Users.Create;
+using Taskify.SharedKernel.Security;
+using Taskify.Web.Authorization;
+using Taskify.Web.Authorization.Attributes;
 
+[ContextAuthorization(SecurityContexts.Identity.Users, Role.Contributor)]
+[ScopeAuthorization(Scopes.Identity.Users.All, Scopes.Identity.Users.Write)]
 public sealed class CreateEndpoint : Endpoint<CreateUserDto, int>
 {
     private readonly IMediator _mediator;
@@ -17,8 +22,8 @@ public sealed class CreateEndpoint : Endpoint<CreateUserDto, int>
 
     public override void Configure()
     {
-        AllowAnonymous();
         Post("api/identity/users");
+        Policies(PolicyNames.HasScope, PolicyNames.HasRoleAccessToContext);
     }
 
     public override async Task HandleAsync(

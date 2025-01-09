@@ -8,7 +8,8 @@ var taskifyEnvironmentSettings = builder.Services.AddSettings(builder.Environmen
 
 builder.Services
        .AddMediatrConfiguration()
-       .AddServices(builder.Configuration, taskifyEnvironmentSettings, logger);
+       .AddServices(builder.Configuration, taskifyEnvironmentSettings, logger)
+       .AddTaskifyAuthorization();
 
 // Configure the HTTP request pipeline
 var app = builder.Build();

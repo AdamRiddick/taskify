@@ -7,7 +7,12 @@ using FastEndpoints;
 using MediatR;
 
 using Taskify.Identity.UseCases.Users.List;
+using Taskify.SharedKernel.Security;
+using Taskify.Web.Authorization;
+using Taskify.Web.Authorization.Attributes;
 
+[ContextAuthorization(SecurityContexts.Identity.Users, Role.Reader)]
+[ScopeAuthorization(Scopes.Identity.Users.All, Scopes.Identity.Users.Read)]
 public sealed class ListEndpoint : Endpoint<ListUsersQuery, Result<IEnumerable<ListUsersDto>>>
 {
     private readonly IMediator _mediator;
@@ -19,8 +24,8 @@ public sealed class ListEndpoint : Endpoint<ListUsersQuery, Result<IEnumerable<L
 
     public override void Configure()
     {
-        AllowAnonymous();
         Get("api/tasks/users");
+        Policies(PolicyNames.HasScope, PolicyNames.HasRoleAccessToContext);
     }
 
     public override async Task HandleAsync(

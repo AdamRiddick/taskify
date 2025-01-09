@@ -5,7 +5,12 @@ using FastEndpoints;
 using MediatR;
 
 using Taskify.Identity.UseCases.Users.Get;
+using Taskify.SharedKernel.Security;
+using Taskify.Web.Authorization;
+using Taskify.Web.Authorization.Attributes;
 
+[ContextAuthorization(SecurityContexts.Identity.Users, Role.Reader)]
+[ScopeAuthorization(Scopes.Identity.Users.All, Scopes.Identity.Users.Read)]
 public sealed class GetEndpoint : Endpoint<GetUserQuery, GetUserDto>
 {
     private readonly IMediator _mediator;
@@ -17,8 +22,8 @@ public sealed class GetEndpoint : Endpoint<GetUserQuery, GetUserDto>
 
     public override void Configure()
     {
-        AllowAnonymous();
         Get("api/tasks/user/{id}");
+        Policies(PolicyNames.HasScope, PolicyNames.HasRoleAccessToContext);
     }
 
     public override async Task HandleAsync(
