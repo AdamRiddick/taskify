@@ -16,7 +16,7 @@ public static class ServicesConfiguration
         ITaskifyEnvironmentSettings taskifyEnvironmentSettings,
         ILogger logger)
     {
-        services.AddFastEndpoints()
+        services.AddFastEndpoints(x => x.IncludeAbstractValidators = true)
                 .AddIdentityInfrastructure(configuration, taskifyEnvironmentSettings)
                 .AddTasksInfrastructure(configuration, taskifyEnvironmentSettings)
                 .AddIdentityUseCaseServices()
