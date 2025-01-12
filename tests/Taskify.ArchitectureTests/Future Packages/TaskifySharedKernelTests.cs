@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Reflection;
 
 using Taskify.ArchitectureTests.Common;
-using Taskify.Infrastructure.Email;
 using Taskify.SharedKernel.Configuration;
 
 using Xunit;

@@ -6,19 +6,19 @@ using System.Collections.Generic;
 using System.Reflection;
 
 using Taskify.ArchitectureTests.Common;
-using Taskify.Infrastructure.Email;
+using Taskify.Infrastructure.Notifications.Dispatcher;
 
 using Xunit;
 
 using static ArchUnitNET.Fluent.ArchRuleDefinition;
 
-public class TaskifyInfrastructureEmailTests : TestBase
+public class TaskifyInfrastructureNotificationsDispatcherTests : TestBase
 {
-    static TaskifyInfrastructureEmailTests()
+    static TaskifyInfrastructureNotificationsDispatcherTests()
     {
         var assembliesToCheck = new Assembly[]
         {
-            typeof(FakeEmailSender).Assembly // Taskify.Infrastructure.Email
+            typeof(SendNotificationHandler).Assembly // Taskify.Infrastructure.Notifications.Dispatcher
         };
 
         Init(assembliesToCheck);
@@ -26,7 +26,7 @@ public class TaskifyInfrastructureEmailTests : TestBase
     [Fact]
     public void dependencies_check()
     {
-        var namespaceToTest = "Taskify.Infrastructure.Email";
+        var namespaceToTest = "Taskify.Infrastructure.Notifications.Dispatcher";
         var approvedReferences = new List<string>() {
             namespaceToTest,
             "Taskify.SharedKernel",

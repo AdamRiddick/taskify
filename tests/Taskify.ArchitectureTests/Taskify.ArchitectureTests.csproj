@@ -23,6 +23,7 @@
     <ProjectReference Include="..\..\src\Domains\Tasks\Taskify.Tasks.Core\Taskify.Tasks.Core.csproj" />
     <ProjectReference Include="..\..\src\Domains\Tasks\Taskify.Tasks.Infrastructure\Taskify.Tasks.Infrastructure.csproj" />
     <ProjectReference Include="..\..\src\Domains\Tasks\Taskify.Tasks.UseCases\Taskify.Tasks.UseCases.csproj" />
+    <ProjectReference Include="..\..\src\Future Packages\Taskify.Infrastructure.Notifications.Dispatcher\Taskify.Infrastructure.Notifications.Dispatcher.csproj" />
   </ItemGroup>
 
 </Project>

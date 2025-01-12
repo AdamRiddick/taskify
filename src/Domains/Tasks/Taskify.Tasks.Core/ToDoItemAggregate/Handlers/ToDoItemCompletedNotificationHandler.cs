@@ -7,23 +7,29 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-using Taskify.SharedKernel.Email;
+using Taskify.SharedKernel.Notifications;
 using Taskify.Tasks.Core.ToDoItemAggregate.Events;
 
 public class ToDoItemCompletedNotificationHandler : INotificationHandler<ToDoItemCompletedEvent>
 {
-    private readonly IEmailSender _emailSender;
+    private readonly IMediator _mediator;
 
     public ToDoItemCompletedNotificationHandler(
-        IEmailSender emailSender)
+        IMediator mediator)
     {
-        _emailSender = emailSender;
+        _mediator = mediator;
     }
 
     public Task Handle(ToDoItemCompletedEvent notification, CancellationToken cancellationToken)
     {
         Guard.Against.Null(notification);
 
-        return _emailSender.SendEmailAsync("test@test.com", "test@test.com", "Item Complete", $"\"{notification.Item.Title}\" was completed on {notification.DateOccurred}.");
+        return _mediator.Publish(new SendNotificationCommand(
+            new Notification
+            {
+                Message = $"\"{notification.Item.Title}\" was completed on {notification.DateOccurred}.",
+                Title = "ToDo Item Completed",
+                UserId = notification.Item.AuthorId
+            }));
     }
 }

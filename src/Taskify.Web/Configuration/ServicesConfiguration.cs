@@ -18,7 +18,8 @@ public static class ServicesConfiguration
     {
         services.AddFastEndpoints(x => x.IncludeAbstractValidators = true)
                 .AddIdentityInfrastructure(configuration, taskifyEnvironmentSettings)
-                .AddTasksInfrastructure(configuration, taskifyEnvironmentSettings)
+                .AddNotificationDispatcherInfrastructure(configuration)
+                .AddTasksInfrastructure(configuration)
                 .AddIdentityUseCaseServices()
                 .AddTasksUseCaseServices();
         logger.LogInformation("Services registered");

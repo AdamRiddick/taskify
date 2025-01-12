@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Future Packages\Taskify.Infrastructure.Ef\Taskify.Infrastructure.Ef.csproj" />
-    <ProjectReference Include="..\..\..\Future Packages\Taskify.Infrastructure.Email\Taskify.Infrastructure.Email.csproj" />
     <ProjectReference Include="..\..\..\Future Packages\Taskify.SharedKernel\Taskify.SharedKernel.csproj" />
     <ProjectReference Include="..\Taskify.Tasks.Core\Taskify.Tasks.Core.csproj" />
   </ItemGroup>

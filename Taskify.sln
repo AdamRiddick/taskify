@@ -35,13 +35,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Tasks.UseCases", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Tasks.Infrastructure", "src\Domains\Tasks\Taskify.Tasks.Infrastructure\Taskify.Tasks.Infrastructure.csproj", "{E8478449-CD3C-4BE3-A550-93F42BE764B6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Infrastructure.Email", "src\Future Packages\Taskify.Infrastructure.Email\Taskify.Infrastructure.Email.csproj", "{F206306F-9079-4FA0-AE72-6FD8A907AD55}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Identity.Core", "src\Domains\Identity\Taskify.Identity.Core\Taskify.Identity.Core.csproj", "{028C19A0-E8F9-49B6-92D4-1519ABA4D578}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Identity.Infrastructure", "src\Domains\Identity\Taskify.Identity.Infrastructure\Taskify.Identity.Infrastructure.csproj", "{1AB67D9C-C0E9-4B9E-A0C3-4C8C592C3BB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskify.Identity.UseCases", "src\Domains\Identity\Taskify.Identity.UseCases\Taskify.Identity.UseCases.csproj", "{CDE6AA31-F5AD-4909-A931-6541AD6B60FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taskify.Infrastructure.Notifications.Dispatcher", "src\Future Packages\Taskify.Infrastructure.Notifications.Dispatcher\Taskify.Infrastructure.Notifications.Dispatcher.csproj", "{F3464486-B983-416B-B847-A646868D5FE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,10 +81,6 @@ Global
 		{E8478449-CD3C-4BE3-A550-93F42BE764B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8478449-CD3C-4BE3-A550-93F42BE764B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8478449-CD3C-4BE3-A550-93F42BE764B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F206306F-9079-4FA0-AE72-6FD8A907AD55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F206306F-9079-4FA0-AE72-6FD8A907AD55}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F206306F-9079-4FA0-AE72-6FD8A907AD55}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F206306F-9079-4FA0-AE72-6FD8A907AD55}.Release|Any CPU.Build.0 = Release|Any CPU
 		{028C19A0-E8F9-49B6-92D4-1519ABA4D578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{028C19A0-E8F9-49B6-92D4-1519ABA4D578}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{028C19A0-E8F9-49B6-92D4-1519ABA4D578}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -97,6 +93,10 @@ Global
 		{CDE6AA31-F5AD-4909-A931-6541AD6B60FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDE6AA31-F5AD-4909-A931-6541AD6B60FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDE6AA31-F5AD-4909-A931-6541AD6B60FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3464486-B983-416B-B847-A646868D5FE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3464486-B983-416B-B847-A646868D5FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3464486-B983-416B-B847-A646868D5FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3464486-B983-416B-B847-A646868D5FE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,10 +111,10 @@ Global
 		{0048A03E-4EC7-4A04-B0DF-8791F04175E9} = {789BF089-342D-45F5-8EDE-4B74383F4E3C}
 		{4186102A-480D-4BB1-B7F4-CA755819BC4F} = {789BF089-342D-45F5-8EDE-4B74383F4E3C}
 		{E8478449-CD3C-4BE3-A550-93F42BE764B6} = {789BF089-342D-45F5-8EDE-4B74383F4E3C}
-		{F206306F-9079-4FA0-AE72-6FD8A907AD55} = {7E514E54-9B42-461D-8A68-30CDD96DC246}
 		{028C19A0-E8F9-49B6-92D4-1519ABA4D578} = {C118ADAD-B597-410F-8531-EF656C310D20}
 		{1AB67D9C-C0E9-4B9E-A0C3-4C8C592C3BB9} = {C118ADAD-B597-410F-8531-EF656C310D20}
 		{CDE6AA31-F5AD-4909-A931-6541AD6B60FB} = {C118ADAD-B597-410F-8531-EF656C310D20}
+		{F3464486-B983-416B-B847-A646868D5FE5} = {7E514E54-9B42-461D-8A68-30CDD96DC246}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11D3D1E4-8EF8-43DB-B7E6-0733C759C257}
