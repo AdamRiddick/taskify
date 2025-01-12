@@ -7,6 +7,7 @@
 - CQRS
 - DDD
 - Mediator Pattern
+- Outbox Pattern
 - Repository Pattern
 - REPR
 - SDLC (SAST, DAST, SCA)
