@@ -1,4 +1,4 @@
-﻿namespace Taskify.Tasks.Infrastructure;
+﻿namespace Taskify.Infrastructure.Notifications.Dispatcher;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

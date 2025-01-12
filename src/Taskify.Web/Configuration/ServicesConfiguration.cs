@@ -4,6 +4,7 @@ using FastEndpoints;
 
 using Taskify.Identity.Infrastructure;
 using Taskify.Identity.UseCases;
+using Taskify.Infrastructure.Notifications.Dispatcher;
 using Taskify.SharedKernel.Configuration;
 using Taskify.Tasks.Infrastructure;
 using Taskify.Tasks.UseCases;

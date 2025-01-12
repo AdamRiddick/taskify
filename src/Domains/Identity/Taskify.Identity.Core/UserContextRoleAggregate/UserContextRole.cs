@@ -1,6 +1,7 @@
 ﻿namespace Taskify.Identity.Core.UserContextRoleAggregate
 {
     using Taskify.Identity.Core.ContextTypeAggregate;
+    using Taskify.Identity.Core.UserAggregate;
     using Taskify.SharedKernel.Data;
     using Taskify.SharedKernel.Security;
 
@@ -13,6 +14,8 @@
         public ContextType ContextType { get; set; } = new ContextType();
 
         public Role Role { get; set; }
+
+        public User User { get; set; } = default!;
 
         public int UserId { get; set; }
     }
