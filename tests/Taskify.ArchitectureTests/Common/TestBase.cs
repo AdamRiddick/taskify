@@ -8,9 +8,14 @@ using System;
 using Assembly = System.Reflection.Assembly;
 using ArchUnitNET.Domain.Extensions;
 
-public abstract class TestBase
+#pragma warning disable S2326 // Unused type parameters should be removed
+public abstract class TestBase<T> where T : class
+#pragma warning restore S2326 // Unused type parameters should be removed
+
 {
+#pragma warning disable S2743 // Static fields should not be used in generic types
     protected static Architecture? Architecture = null;
+#pragma warning restore S2743 // Static fields should not be used in generic types
 
     /// <summary>
     /// A list of dependencies that are acceptable in any domain or layer.
@@ -22,12 +27,16 @@ public abstract class TestBase
 
             // Microsoft Packages
             "Microsoft.CodeAnalysis",
+            "Microsoft.Extensions.Configuration",
+            "Microsoft.Extensions.DependencyInjection",
 
             // Internal Packages
             "Taskify.SharedKernel",
 
             // External Packages
             "Ardalis.GuardClauses",
+            "Ardalis.GuardClauses.Guard",
+            "Ardalis.GuardClauses.GuardClauseExtensions",
             "Ardalis.Result",
             "FluentValidation",
             "Mapster",

@@ -12,7 +12,7 @@ using Xunit;
 
 using static ArchUnitNET.Fluent.ArchRuleDefinition;
 
-public class TaskifySharedKernelTests : TestBase
+public class TaskifySharedKernelTests : TestBase<TaskifySharedKernelTests>
 {
     static TaskifySharedKernelTests()
     {
@@ -29,7 +29,6 @@ public class TaskifySharedKernelTests : TestBase
         var namespaceToTest = "Taskify.SharedKernel";
         var approvedReferences = new List<string>() {
             namespaceToTest,
-            "Ardalis.GuardClauses",
             "FluentValidation",
             "MediatR",
             "Microsoft.Extensions",
@@ -45,7 +44,7 @@ public class TaskifySharedKernelTests : TestBase
                    .That()
                    .ResideInNamespace(namespaceToTest, true)
                    .Should()
-                   .OnlyDependOn(approvedReferences, true)
+                   .OnlyDependOn(BuildDependencies(approvedReferences), true)
                    .AndShould()
                    .NotDependOnAny(rejectedReferences, true);
 

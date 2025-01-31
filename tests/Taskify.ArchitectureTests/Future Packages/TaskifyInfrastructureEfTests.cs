@@ -12,7 +12,7 @@ using Xunit;
 
 using static ArchUnitNET.Fluent.ArchRuleDefinition;
 
-public class TaskifyInfrastructureEfTests : TestBase
+public class TaskifyInfrastructureEfTests : TestBase<TaskifyInfrastructureEfTests>
 {
     static TaskifyInfrastructureEfTests()
     {
@@ -47,7 +47,7 @@ public class TaskifyInfrastructureEfTests : TestBase
                    .That()
                    .ResideInNamespace(namespaceToTest, true)
                    .Should()
-                   .OnlyDependOn(approvedReferences, true)
+                   .OnlyDependOn(BuildDependencies(approvedReferences), true)
                    .AndShould()
                    .NotDependOnAny(rejectedReferences, true);
 

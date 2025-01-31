@@ -12,7 +12,7 @@ using Xunit;
 
 using static ArchUnitNET.Fluent.ArchRuleDefinition;
 
-public class TaskifyInfrastructureNotificationsDispatcherTests : TestBase
+public class TaskifyInfrastructureNotificationsDispatcherTests : TestBase<TaskifyInfrastructureNotificationsDispatcherTests>
 {
     static TaskifyInfrastructureNotificationsDispatcherTests()
     {
@@ -29,7 +29,9 @@ public class TaskifyInfrastructureNotificationsDispatcherTests : TestBase
         var namespaceToTest = "Taskify.Infrastructure.Notifications.Dispatcher";
         var approvedReferences = new List<string>() {
             namespaceToTest,
+            "Taskify.Infrastructure.Ef",
             "Taskify.SharedKernel",
+            "Microsoft.EntityFrameworkCore",
             "Microsoft.Extensions",
             "System"
         };
@@ -46,7 +48,7 @@ public class TaskifyInfrastructureNotificationsDispatcherTests : TestBase
                    .That()
                    .ResideInNamespace(namespaceToTest, true)
                    .Should()
-                   .OnlyDependOn(approvedReferences, true)
+                   .OnlyDependOn(BuildDependencies(approvedReferences), true)
                    .AndShould()
                    .NotDependOnAny(rejectedReferences, true);
 

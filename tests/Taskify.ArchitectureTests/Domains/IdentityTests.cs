@@ -7,7 +7,7 @@
     using Taskify.Identity.Infrastructure.Data;
     using Taskify.Identity.UseCases.ContextTypes.Create;
 
-    public class IdentityTests : DomainTestsBase
+    public class IdentityTests : DomainTestsBase<IdentityTests>
     {
         static IdentityTests()
         {

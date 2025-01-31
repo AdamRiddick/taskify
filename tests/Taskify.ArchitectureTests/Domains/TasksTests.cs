@@ -7,7 +7,7 @@ using Taskify.Tasks.Core.ToDoItemAggregate;
 using Taskify.Tasks.Infrastructure.Data;
 using Taskify.Tasks.UseCases.ToDoItems.Create;
 
-public class TasksTests : DomainTestsBase
+public class TasksTests : DomainTestsBase<TasksTests>
 {
     static TasksTests()
     {
