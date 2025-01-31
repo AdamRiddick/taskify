@@ -1,6 +1,5 @@
 ﻿namespace Taskify.Tasks.UseCases.ToDoItems.Delete;
 
-using Ardalis.GuardClauses;
 using Ardalis.Result;
 using Taskify.SharedKernel.Cqrs;
 using Taskify.SharedKernel.Data;
@@ -20,7 +19,9 @@ public class DeleteToDoItemHandler : ICommandHandler<DeleteToDoItemCommand, Resu
         CancellationToken cancellationToken)
     {
         var item = await _repository.GetByIdAsync(request.Id, cancellationToken);
-        Guard.Against.Null(item);
+        if (item == null)
+            return Result.NotFound("Item not found.");
+
         await _repository.DeleteAsync(item, cancellationToken);
         return Result.Success();
     }

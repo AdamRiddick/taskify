@@ -6,6 +6,7 @@
 - Clean Architecture
 - CQRS
 - DDD
+- Everything As Code
 - Mediator Pattern
 - Outbox Pattern
 - Repository Pattern

@@ -1,6 +1,5 @@
 ﻿namespace Taskify.Identity.UseCases.ContextTypes.Delete;
 
-using Ardalis.GuardClauses;
 using Ardalis.Result;
 
 using Taskify.Identity.Core.ContextTypeAggregate;
@@ -21,7 +20,9 @@ public class DeleteContextTypeHandler : ICommandHandler<DeleteContextTypeCommand
         CancellationToken cancellationToken)
     {
         var item = await _repository.GetByIdAsync(request.Id, cancellationToken);
-        Guard.Against.Null(item);
+        if(item == null)
+            return Result.NotFound("ContextType not found.");
+
         item.MarkDeleted();
         await _repository.DeleteAsync(item, cancellationToken);
         return Result.Success();

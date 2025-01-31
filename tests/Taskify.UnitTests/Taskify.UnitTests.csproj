@@ -6,4 +6,49 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Domains\Identity\UseCases\ContextTypes\List\" />
+    <Folder Include="Domains\Identity\UseCases\UserContextRoles\Delete\" />
+    <Folder Include="Domains\Identity\UseCases\UserContextRoles\List\" />
+    <Folder Include="Domains\Identity\UseCases\UserContextRoles\Verify\" />
+    <Folder Include="Domains\Identity\UseCases\Users\Create\" />
+    <Folder Include="Domains\Identity\UseCases\Users\Delete\" />
+    <Folder Include="Domains\Identity\UseCases\Users\Get\" />
+    <Folder Include="Domains\Identity\UseCases\Users\List\" />
+    <Folder Include="Domains\Identity\UseCases\Users\Update\" />
+    <Folder Include="Domains\Tasks\Core\" />
+    <Folder Include="Domains\Tasks\UseCases\ToDoItems\Create\" />
+    <Folder Include="Domains\Tasks\UseCases\ToDoItems\Delete\" />
+    <Folder Include="Domains\Tasks\UseCases\ToDoItems\Get\" />
+    <Folder Include="Domains\Tasks\UseCases\ToDoItems\List\" />
+    <Folder Include="Domains\Tasks\UseCases\ToDoItems\MarkToDoItemComplete\" />
+    <Folder Include="Domains\Tasks\UseCases\ToDoItems\Update\" />
+    <Folder Include="Future Packages\Taskify.SharedKernel\" />
+    <Folder Include="Future Packages\Taskify.Infrastructure.Notifications.Dispatcher\" />
+    <Folder Include="Future Packages\Taskify.Infrastructure.Ef\" />
+    <Folder Include="Web\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Domains\Identity\Taskify.Identity.Core\Taskify.Identity.Core.csproj" />
+    <ProjectReference Include="..\..\src\Domains\Identity\Taskify.Identity.Infrastructure\Taskify.Identity.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Domains\Identity\Taskify.Identity.UseCases\Taskify.Identity.UseCases.csproj" />
+    <ProjectReference Include="..\..\src\Domains\Tasks\Taskify.Tasks.Core\Taskify.Tasks.Core.csproj" />
+    <ProjectReference Include="..\..\src\Domains\Tasks\Taskify.Tasks.Infrastructure\Taskify.Tasks.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Domains\Tasks\Taskify.Tasks.UseCases\Taskify.Tasks.UseCases.csproj" />
+    <ProjectReference Include="..\..\src\Future Packages\Taskify.Infrastructure.Ef\Taskify.Infrastructure.Ef.csproj" />
+    <ProjectReference Include="..\..\src\Future Packages\Taskify.Infrastructure.Notifications.Dispatcher\Taskify.Infrastructure.Notifications.Dispatcher.csproj" />
+    <ProjectReference Include="..\..\src\Future Packages\Taskify.SharedKernel\Taskify.SharedKernel.csproj" />
+    <ProjectReference Include="..\..\src\Taskify.Web\Taskify.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Microsoft.NET.Test.Sdk" />
+	<PackageReference Include="Moq" />
+	<PackageReference Include="xunit.runner.visualstudio">
+	  <PrivateAssets>all</PrivateAssets>
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
+	<PackageReference Include="xunit" />
+  </ItemGroup>
 </Project>

@@ -1,6 +1,5 @@
 ﻿namespace Taskify.Identity.UseCases.Users.Update;
 
-using Ardalis.GuardClauses;
 using Ardalis.Result;
 
 using Mapster;
@@ -23,7 +22,8 @@ public class UpdateUserHandler : ICommandHandler<UpdateUserCommand, Result>
         CancellationToken cancellationToken)
     {
         var existingItem = await _repository.GetByIdAsync(request.Id, cancellationToken);
-        Guard.Against.Null(existingItem);
+        if (existingItem == null)
+            return Result.NotFound("User not found.");
 
         request.Dto.Adapt(existingItem);
         await _repository.UpdateAsync(existingItem, cancellationToken);

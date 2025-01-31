@@ -1,6 +1,5 @@
 ﻿namespace Taskify.Identity.UseCases.Users.Delete;
 
-using Ardalis.GuardClauses;
 using Ardalis.Result;
 
 using Taskify.Identity.Core.UserAggregate;
@@ -22,7 +21,9 @@ public class DeleteUserHandler : ICommandHandler<DeleteUserCommand, Result>
         CancellationToken cancellationToken)
     {
         var item = await _repository.GetByIdAsync(request.Id, cancellationToken);
-        Guard.Against.Null(item);
+        if (item == null)
+            return Result.NotFound("User not found.");
+
         await _repository.DeleteAsync(item, cancellationToken);
         return Result.Success();
     }

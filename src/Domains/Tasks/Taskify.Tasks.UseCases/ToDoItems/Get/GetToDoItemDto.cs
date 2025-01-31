@@ -5,6 +5,7 @@ using Taskify.Tasks.Core.ToDoItemAggregate;
 
 public class GetToDoItemDto
 {
+    public int Id { get; set; }
     public int? AssigneeId { get; set; }
     public int AuthorId { get; set; }
     public string Title { get; set; } = string.Empty;
