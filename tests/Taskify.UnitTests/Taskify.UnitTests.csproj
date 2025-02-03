@@ -23,9 +23,6 @@
     <Folder Include="Domains\Tasks\UseCases\ToDoItems\List\" />
     <Folder Include="Domains\Tasks\UseCases\ToDoItems\MarkToDoItemComplete\" />
     <Folder Include="Domains\Tasks\UseCases\ToDoItems\Update\" />
-    <Folder Include="Future Packages\Taskify.SharedKernel\" />
-    <Folder Include="Future Packages\Taskify.Infrastructure.Notifications.Dispatcher\" />
-    <Folder Include="Future Packages\Taskify.Infrastructure.Ef\" />
     <Folder Include="Web\" />
   </ItemGroup>
 

@@ -1,11 +1,11 @@
-﻿namespace Taskify.UnitTests.Helpers;
+﻿namespace Taskify.UnitTests.TestHelpers;
 
 using Microsoft.Extensions.Logging;
 
 using System;
 
 public class NullLogger : NullLogger<NullLogger>
-{ 
+{
 }
 
 public class NullLogger<T> : ILogger<T>

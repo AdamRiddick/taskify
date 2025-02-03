@@ -12,7 +12,7 @@ using Taskify.Identity.Infrastructure.Data;
 using Taskify.SharedKernel;
 using Taskify.SharedKernel.Configuration;
 using Taskify.SharedKernel.Data;
-using Taskify.UnitTests.Helpers;
+using Taskify.UnitTests.TestHelpers;
 
 using Xunit;
 
