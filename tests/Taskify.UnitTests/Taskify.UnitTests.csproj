@@ -23,7 +23,6 @@
     <Folder Include="Domains\Tasks\UseCases\ToDoItems\List\" />
     <Folder Include="Domains\Tasks\UseCases\ToDoItems\MarkToDoItemComplete\" />
     <Folder Include="Domains\Tasks\UseCases\ToDoItems\Update\" />
-    <Folder Include="Web\" />
   </ItemGroup>
 
   <ItemGroup>

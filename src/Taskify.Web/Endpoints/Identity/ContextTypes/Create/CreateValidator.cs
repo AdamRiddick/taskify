@@ -16,8 +16,9 @@ public class CreateValidator : AbstractValidator<CreateContextTypeCommand>
         RuleFor(x => x.Dto)
             .MustAsync(async (dto, token) =>
             {
-                var existing = await repository.GetAsync(x => x.Name == dto.Name);
+                var existing = await repository.GetAsync(x => x.Name == dto.Name, token);
                 return existing == null;
-            });
+            })
+            .WithMessage("Context type with the same name already exists.");
     }
 }

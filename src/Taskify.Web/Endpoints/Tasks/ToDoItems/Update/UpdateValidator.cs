@@ -24,7 +24,8 @@ public class UpdateValidator : AbstractValidator<UpdateToDoItemCommand>
             {
                 var existingEntity = await repository.GetByIdAsync(x.Id, token);
                 return existingEntity != null;
-            });
+            })
+            .WithMessage("Entity does not exist.");
 
         RuleFor(x => x.Dto.AssigneeId)
             .MustAsync(async (x, token) =>
@@ -36,6 +37,7 @@ public class UpdateValidator : AbstractValidator<UpdateToDoItemCommand>
 
                 var user = await userRepository.GetByIdAsync(x.Value, token);
                 return user != null;
-            });
+            })
+            .WithMessage("Assignee does not exist.");
     }
 }

@@ -18,6 +18,7 @@ public class DeleteValidator : AbstractValidator<DeleteUserContextRoleCommand>
             {
                 var existingEntity = await repository.GetByIdAsync(x.Id, token);
                 return existingEntity != null;
-            });
+            })
+            .WithMessage("Entity does not exist.");
     }
 }

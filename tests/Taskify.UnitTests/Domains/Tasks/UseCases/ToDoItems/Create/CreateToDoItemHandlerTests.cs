@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 using Ardalis.Result;
 
-using Mapster;
-
 using Moq;
 
 using Taskify.SharedKernel.Data;
 using Taskify.Tasks.Core.ToDoItemAggregate;
 using Taskify.Tasks.Core.ToDoItemAggregate.Events;
+
 using Xunit;
 
 public class CreateToDoItemHandlerTests

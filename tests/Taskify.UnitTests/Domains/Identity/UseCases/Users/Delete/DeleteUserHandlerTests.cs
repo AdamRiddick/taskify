@@ -3,8 +3,6 @@ namespace Taskify.Identity.UseCases.Users.Delete;
 using System.Threading;
 using System.Threading.Tasks;
 
-using Ardalis.Result;
-
 using Moq;
 
 using Taskify.Identity.Core.UserAggregate;

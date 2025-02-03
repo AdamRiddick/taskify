@@ -2,8 +2,6 @@
 
 using Taskify.Identity.Core.ContextTypeAggregate;
 using Taskify.Identity.Core.ContextTypeAggregate.Events;
-using Taskify.Identity.Core.UserAggregate.Events;
-using Taskify.Identity.Core.UserAggregate;
 
 using Xunit;
 

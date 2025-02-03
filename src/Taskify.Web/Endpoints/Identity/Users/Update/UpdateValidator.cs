@@ -32,6 +32,7 @@ public class UpdateValidator : AbstractValidator<UpdateUserCommand>
             {
                 var existingEntity = await repository.GetByIdAsync(x.Id, token);
                 return existingEntity != null;
-            });
+            })
+            .WithMessage("Entity does not exist.");
     }
 }

@@ -18,6 +18,7 @@ public class GetValidator : AbstractValidator<GetUserQuery>
             {
                 var existingEntity = await repository.GetByIdAsync(x.Id, token);
                 return existingEntity != null;
-            });
+            })
+            .WithMessage("Entity does not exist.");
     }
 }

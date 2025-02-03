@@ -18,6 +18,7 @@ public class DeleteValidator : AbstractValidator<DeleteToDoItemCommand>
             {
                 var existingEntity = await repository.GetByIdAsync(x.Id, token);
                 return existingEntity != null;
-            });
+            })
+            .WithMessage("Entity does not exist.");
     }
 }

@@ -26,6 +26,7 @@ public class CreateValidator : AbstractValidator<CreateToDoItemCommand>
 
                 var user = await userRepository.GetByIdAsync(x.Value, token);
                 return user != null;
-            });
+            })
+            .WithMessage("Assignee does not exist.");
     }
 }

@@ -1,8 +1,8 @@
-﻿namespace Taskify.Identity.UseCases.Users.Create
+﻿namespace Taskify.Identity.UseCases.Users.Update
 {
     using Taskify.SharedKernel.Notifications;
 
-    public class NotificationPreferenceDto
+    public class UpdateNotificationPreferenceDto
     {
         public NotificationChannel NotificationChannel { get; set; } = NotificationChannel.None;
 
