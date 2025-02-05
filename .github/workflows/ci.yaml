@@ -28,8 +28,10 @@ jobs:
         run: dotnet build --no-restore --configuration Release
 
       - name: Run tests
-        run: dotnet test tests --no-build --configuration Release --logger "trx;LogFileName=test_results.trx" --results-directory TestResults
-        continue-on-error: false
+        run: |
+          find tests -name "*.csproj" | while read project; do
+            dotnet test "$project" --no-build --configuration Release --logger "trx;LogFileName=test_results.trx" --results-directory TestResults
+          done
 
       - name: Publish test results
         uses: actions/upload-artifact@v4
