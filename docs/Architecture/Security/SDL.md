@@ -12,6 +12,19 @@ Security risks (and the need to mitigate them) can occur at any point in the dev
 - Run – ensure that environment running the code (cloud, servers, mobile devices, others) follows security best practices across people, process, and technology to avoid attackers compromising and abusing the workload. This includes the adoption of well-established best practices, security baseline configurations, and more.
 - Zero Trust architecture and governance – All of these stages should follow Zero Trust principles to assume breach (assume compromise), explicitly verify trust, and grant the least privilege required for each user account, machine/service identity, and application component.
 
+## Principles to Follow
+
+- Defence in Depth
+- Deny by Default
+- Design for Simplicity
+- Fail Securely
+- Least Privilege
+- Maintain Security Knowledge
+- Privacy by Design
+- Secure Defaults
+- Separation of Concerns
+- Zero Trust
+
 ## Establish Standards, Metrics & Governance
 
 - Standards are outlined in this document
