@@ -58,9 +58,7 @@ Security risks (and the need to mitigate them) can occur at any point in the dev
 
 - SCA/SBOM provided through Dependabot
 
-- [TODO] Open-Source scanning with Snyk
-
-- [TODO] Artifact Attestation
+- Third-party vulnerability scanning is provided by Github Dependency Review (Github Advanced Security)
 
 ## Secure the engineering environment
 
@@ -69,10 +67,9 @@ Security risks (and the need to mitigate them) can occur at any point in the dev
 
 ## Perform Security Testing
 
-- [TODO] SAST
+- SAST is provided by Code QL (Github Advanced Security)
 - [TODO] DAST
 - SCA through Dependabot
-- [TODO] Snyk OS Scanning
 - [TODO] Pen Testing
 
 ## Ensure Operational Platform Security
