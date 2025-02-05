@@ -22,8 +22,8 @@ public class DomainCoverageTests
         }
 
         var basePath = directoryInfo.FullName;
-        var domainsPath = Path.Combine(basePath, "src\\Domains");
-        var archTestsPath = Path.Combine(basePath, "tests\\Taskify.ArchitectureTests\\Domains");
+        var domainsPath = Path.Combine(basePath, "src", "Domains");
+        var archTestsPath = Path.Combine(basePath, "tests", "Taskify.ArchitectureTests", "Domains");
 
         // Act
         var missingDomainTests = new List<string>();
