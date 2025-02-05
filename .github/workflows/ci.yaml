@@ -9,6 +9,22 @@ on:
       - main
 
 jobs:
+
+  dependency-review:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'  # Run this job only for pull requests
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: high
+          # Any SPDX-compliant license identifiers or expressions from https://spdx.org/licenses/
+          allow-licenses: MIT, BSD-3-Clause, Apache-2.0, ISC, MPL-2.0
+
   build-and-test:
     runs-on: ubuntu-latest
 
@@ -20,13 +36,6 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 8.0.x
-
-      - name: Dependency Review
-        uses: actions/dependency-review-action@v4
-        with:
-          fail-on-severity: high
-          # Any SPDX-compliant license identifiers or expressions from https://spdx.org/licenses/
-          allow-licenses: MIT, BSD-3-Clause, Apache-2.0, ISC, MPL-2.0
 
       - name: Restore dependencies
         run: dotnet restore
