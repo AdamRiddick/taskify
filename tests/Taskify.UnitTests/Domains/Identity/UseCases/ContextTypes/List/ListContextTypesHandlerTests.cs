@@ -1,4 +1,4 @@
-namespace Taskify.Identity.UseCases.Tests.ContextTypes.List;
+namespace Taskify.UnitTests.Domains.Identity.UseCases.ContextTypes.List;
 
 using System.Collections.Generic;
 using System.Linq;

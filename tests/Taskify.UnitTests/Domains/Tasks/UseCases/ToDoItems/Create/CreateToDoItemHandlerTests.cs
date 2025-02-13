@@ -1,5 +1,5 @@
-
-namespace Taskify.Tasks.UseCases.ToDoItems.Create;
+namespace Taskify.UnitTests.Domains.Tasks.UseCases.ToDoItems.Create;
+using Taskify.Tasks.UseCases.ToDoItems.Create;
 
 using System.Threading;
 using System.Threading.Tasks;

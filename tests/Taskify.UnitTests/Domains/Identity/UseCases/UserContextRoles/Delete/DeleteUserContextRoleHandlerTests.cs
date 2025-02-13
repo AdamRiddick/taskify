@@ -1,4 +1,5 @@
-namespace Taskify.Identity.UseCases.UserContextRoles.Delete.Tests;
+namespace Taskify.UnitTests.Domains.Identity.UseCases.UserContextRoles.Delete;
+using Taskify.Identity.UseCases.UserContextRoles.Delete;
 
 using System.Threading;
 using System.Threading.Tasks;

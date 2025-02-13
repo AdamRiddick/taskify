@@ -1,4 +1,5 @@
-namespace Taskify.Identity.UseCases.Users.Get.Tests;
+namespace Taskify.UnitTests.Domains.Identity.UseCases.Users.Get;
+using Taskify.Identity.UseCases.Users.Get;
 
 using System.Threading;
 using System.Threading.Tasks;

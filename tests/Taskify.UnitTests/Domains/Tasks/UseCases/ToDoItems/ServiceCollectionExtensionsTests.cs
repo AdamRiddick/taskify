@@ -1,4 +1,4 @@
-namespace Taskify.Tasks.UseCases.Tests;
+namespace Taskify.UnitTests.Domains.Tasks.UseCases.ToDoItems;
 
 using MapsterMapper;
 

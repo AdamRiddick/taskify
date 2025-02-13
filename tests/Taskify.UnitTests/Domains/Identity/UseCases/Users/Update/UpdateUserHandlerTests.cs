@@ -1,4 +1,5 @@
-namespace Taskify.Identity.UseCases.Users.Update.Tests;
+namespace Taskify.UnitTests.Domains.Identity.UseCases.Users.Update;
+using Taskify.Identity.UseCases.Users.Update;
 
 using System.Threading;
 using System.Threading.Tasks;

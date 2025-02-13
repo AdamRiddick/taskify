@@ -1,4 +1,5 @@
-namespace Taskify.Identity.UseCases.UserContextRoles.Create.Tests;
+namespace Taskify.UnitTests.Domains.Identity.UseCases.UserContextRoles.Create;
+using Taskify.Identity.UseCases.UserContextRoles.Create;
 
 using System.Threading;
 using System.Threading.Tasks;

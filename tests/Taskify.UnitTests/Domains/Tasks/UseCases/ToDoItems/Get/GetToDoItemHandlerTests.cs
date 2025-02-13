@@ -1,4 +1,5 @@
-namespace Taskify.Tasks.UseCases.ToDoItems.Get.Tests;
+namespace Taskify.UnitTests.Domains.Tasks.UseCases.ToDoItems.Get;
+using Taskify.Tasks.UseCases.ToDoItems.Get;
 
 using System.Threading;
 using System.Threading.Tasks;

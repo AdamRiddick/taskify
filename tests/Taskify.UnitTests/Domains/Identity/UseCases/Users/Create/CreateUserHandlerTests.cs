@@ -1,4 +1,5 @@
-namespace Taskify.Identity.UseCases.Users.Create.Tests;
+namespace Taskify.UnitTests.Domains.Identity.UseCases.Users.Create;
+using Taskify.Identity.UseCases.Users.Create;
 
 using System.Threading;
 using System.Threading.Tasks;

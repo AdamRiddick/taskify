@@ -1,4 +1,4 @@
-namespace Taskify.Tasks.UseCases.Tests.ToDoItems.MarkToDoItemComplete;
+namespace Taskify.UnitTests.Domains.Tasks.UseCases.ToDoItems.MarkToDoItemComplete;
 
 using System.Threading;
 using System.Threading.Tasks;

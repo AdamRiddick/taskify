@@ -35,7 +35,7 @@
     <ProjectReference Include="..\..\src\Future Packages\Taskify.Infrastructure.Ef\Taskify.Infrastructure.Ef.csproj" />
     <ProjectReference Include="..\..\src\Future Packages\Taskify.Infrastructure.Notifications.Dispatcher\Taskify.Infrastructure.Notifications.Dispatcher.csproj" />
     <ProjectReference Include="..\..\src\Future Packages\Taskify.SharedKernel\Taskify.SharedKernel.csproj" />
-    <ProjectReference Include="..\..\src\Taskify.Web\Taskify.Web.csproj" />
+    <ProjectReference Include="..\..\src\Presentation\Taskify.Api\Taskify.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>

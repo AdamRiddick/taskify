@@ -1,4 +1,5 @@
-namespace Taskify.Tasks.UseCases.ToDoItems.Delete;
+namespace Taskify.UnitTests.Domains.Tasks.UseCases.ToDoItems.Delete;
+using Taskify.Tasks.UseCases.ToDoItems.Delete;
 
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using Taskify.SharedKernel.Data;
 using Taskify.Tasks.Core.ToDoItemAggregate;
 
 using Xunit;
+
 public class DeleteToDoItemHandlerTests
 {
     [Fact]

@@ -1,4 +1,4 @@
-namespace Taskify.Tasks.Core.Tests.ToDoItemAggregate.Handlers;
+namespace Taskify.UnitTests.Domains.Tasks.Core.ToDoItemAggregate.Handlers;
 
 using System.Threading;
 using System.Threading.Tasks;

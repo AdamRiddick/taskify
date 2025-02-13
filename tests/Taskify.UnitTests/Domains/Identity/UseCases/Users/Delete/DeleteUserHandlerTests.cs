@@ -1,4 +1,5 @@
-namespace Taskify.Identity.UseCases.Users.Delete;
+namespace Taskify.UnitTests.Domains.Identity.UseCases.Users.Delete;
+using Taskify.Identity.UseCases.Users.Delete;
 
 using System.Threading;
 using System.Threading.Tasks;

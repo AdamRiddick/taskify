@@ -1,4 +1,4 @@
-namespace Taskify.Tasks.Core.Tests;
+namespace Taskify.UnitTests.Domains.Tasks.Core.ToDoItemAggregate;
 
 using Taskify.Tasks.Core.ToDoItemAggregate;
 using Taskify.Tasks.Core.ToDoItemAggregate.Events;

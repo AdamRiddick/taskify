@@ -1,4 +1,5 @@
-namespace Taskify.Tasks.UseCases.ToDoItems.Update.Tests;
+namespace Taskify.UnitTests.Domains.Tasks.UseCases.ToDoItems.Update;
+using Taskify.Tasks.UseCases.ToDoItems.Update;
 
 using System.Threading;
 using System.Threading.Tasks;

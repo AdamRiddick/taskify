@@ -1,4 +1,5 @@
-namespace Taskify.Identity.UseCases.UserContextRoles.Verify.Tests;
+namespace Taskify.UnitTests.Domains.Identity.UseCases.UserContextRoles.Verify;
+using Taskify.Identity.UseCases.UserContextRoles.Verify;
 
 using System;
 using System.Linq.Expressions;

@@ -1,4 +1,5 @@
-namespace Taskify.Identity.UseCases.Tests;
+namespace Taskify.UnitTests.Domains.Identity.UseCases;
+using Taskify.Identity.UseCases;
 
 using MapsterMapper;
 

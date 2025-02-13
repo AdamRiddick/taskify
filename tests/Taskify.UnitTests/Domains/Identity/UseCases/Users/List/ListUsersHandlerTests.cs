@@ -1,4 +1,5 @@
-namespace Taskify.Identity.UseCases.Users.List;
+namespace Taskify.UnitTests.Domains.Identity.UseCases.Users.List;
+using Taskify.Identity.UseCases.Users.List;
 
 using System.Collections.Generic;
 using System.Linq;
