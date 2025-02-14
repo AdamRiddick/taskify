@@ -20,7 +20,10 @@ public static class MiddlewareConfiguration
         }
 
         app.UseFastEndpoints()
+            .UseBlazorFrameworkFiles()
             .UseSwaggerGen(); // Includes AddFileServer and static files middleware
+
+        app.MapFallbackToFile("index.html").AllowAnonymous();
 
         app.UseHttpsRedirection(); // Note this will drop Authorization headers
         logger.LogInformation("Middlewares registered.");

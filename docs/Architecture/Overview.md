@@ -46,13 +46,21 @@ Use Cases are often grouped into Commands and Queries, following CQRS. Commands 
 
 Having Use Cases as a separate project can reduce the amount of logic in UI and Infrastructure projects.
 
-### Taskify.Web
+### Taskify.Api
 
 The entry point. This is an API project that follows the REPR pattern.
 
 ### Taskify.Ui
 
-Cross-platform UI app.
+Cross-platform UI library holding razor pages and blazor components.
+
+### Taskify.App
+
+Cross-Platform app using Blazor Hybrid. Reliant on Taskify.Ui, and calls out to Taskify.Api, without a direct reference.
+
+### Taskify.Web
+
+Web client using Blazor WASM. Reliant on Taskify.Ui, and calls out to Taskify.Api, without a direct reference.
 
 ## Domain
 

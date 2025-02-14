@@ -60,7 +60,7 @@ public abstract class DomainTestsBase<T> : TestBase<T> where T : class
             "Microsoft.EntityFrameworkCore",
             $"Taskify.{_domain}.Infrastructure",
             "Taskify.Infrastructure.Ef",
-            "Taskify.Infrastructure.Email",
+            "Taskify.Infrastructure.Notifications.Dispatcher",
             "\bTest\b"
         };
 
@@ -85,7 +85,7 @@ public abstract class DomainTestsBase<T> : TestBase<T> where T : class
             $"Taskify.{_domain}.Core",
             "Microsoft.EntityFrameworkCore",
             "Taskify.Infrastructure.Ef",
-            "Taskify.Infrastructure.Email"
+            "Taskify.Infrastructure.Notifications.Dispatcher"
         };
 
         var rejectedReferences = new List<string>() {

@@ -4,6 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<IsPackable>false</IsPackable>
+	<IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,6 +26,9 @@
     <ProjectReference Include="..\..\src\Domains\Tasks\Taskify.Tasks.Infrastructure\Taskify.Tasks.Infrastructure.csproj" />
     <ProjectReference Include="..\..\src\Domains\Tasks\Taskify.Tasks.UseCases\Taskify.Tasks.UseCases.csproj" />
     <ProjectReference Include="..\..\src\Future Packages\Taskify.Infrastructure.Notifications.Dispatcher\Taskify.Infrastructure.Notifications.Dispatcher.csproj" />
+    <ProjectReference Include="..\..\src\Presentation\Components\Taskify.Ui\Taskify.Ui.csproj" />
+    <ProjectReference Include="..\..\src\Presentation\Taskify.Api\Taskify.Api.csproj" />
+    <ProjectReference Include="..\..\src\Presentation\Taskify.Web\Taskify.Web.csproj" />
   </ItemGroup>
 
 </Project>

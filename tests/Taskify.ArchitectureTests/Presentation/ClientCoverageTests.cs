@@ -6,10 +6,10 @@ using System.Reflection;
 
 using Xunit;
 
-public class DomainCoverageTests
+public class ClientCoverageTests
 {
     [Fact]
-    public void domain_coverage_check()
+    public void client_coverage_check()
     {
         // Arrange
         var localPath = new Uri(Assembly.GetExecutingAssembly().Location).LocalPath;
@@ -22,23 +22,24 @@ public class DomainCoverageTests
         }
 
         var basePath = directoryInfo.FullName;
-        var domainsPath = Path.Combine(basePath, "src", "Domains");
-        var archTestsPath = Path.Combine(basePath, "tests", "Taskify.ArchitectureTests", "Domains");
+        var clientsPath = Path.Combine(basePath, "src", "Presentation");
+        var archTestsPath = Path.Combine(basePath, "tests", "Taskify.ArchitectureTests", "Presentation");
 
         // Act
-        var missingDomainTests = new List<string>();
-        foreach (var folder in Directory.GetDirectories(domainsPath))
+        var missingClientTests = new List<string>();
+        foreach (var folder in Directory.GetDirectories(clientsPath))
         {
-            var domainName = Path.GetFileName(folder);
-            var className = $"{domainName}Tests";
+            if (folder.EndsWith("Components") || folder.EndsWith("Taskify.App")) continue;
+            var clientName = Path.GetFileName(folder).Replace("Taskify.", "");
+            var className = $"{clientName}Tests";
 
             if (!File.Exists(Path.Combine(archTestsPath, $"{className}.cs")))
             {
-                missingDomainTests.Add(Path.GetFileName(domainName));
+                missingClientTests.Add(Path.GetFileName(clientName));
             }
         }
 
         // Assert
-        Assert.Empty(missingDomainTests);
+        Assert.Empty(missingClientTests);
     }
 }
