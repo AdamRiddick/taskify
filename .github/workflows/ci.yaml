@@ -26,7 +26,7 @@ jobs:
           allow-licenses: MIT, BSD-3-Clause, Apache-2.0, ISC, MPL-2.0
 
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
